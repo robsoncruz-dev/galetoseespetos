@@ -658,10 +658,13 @@ ul {
 }
 
 @keyframes teaser-glow {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
     opacity: 0.85;
   }
+
   50% {
     transform: scale(1.15);
     opacity: 1;
@@ -998,4 +1001,45 @@ ul {
 /* Prevent layout shift during font loading */
 .font-loading body {
   visibility: hidden;
+}
+
+/* ============================================================
+   15. TOAST "EM BREVE"
+   ============================================================ */
+.em-breve {
+  cursor: pointer;
+}
+
+.toast {
+  position: fixed;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(30, 30, 30, 0.95);
+  border: 1px solid var(--accent-gold);
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  z-index: 9999;
+  transition: bottom 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.toast.show {
+  bottom: 100px;
+}
+
+.toast-icon {
+  font-size: 1.2rem;
+}
+
+.toast-text {
+  color: var(--accent-gold);
+  letter-spacing: 0.05em;
 }

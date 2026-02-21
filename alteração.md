@@ -279,3 +279,31 @@ Acho essa abordagem **muito mais inteligente** que as opções anteriores:
 
 **Recomendo fortemente esta abordagem.** Qual variação de mensagem prefere?
 
+---
+
+## 📱 Links das Redes Sociais e WhatsApp — "Em Breve"
+
+### Entendimento da Tarefa
+
+As redes sociais da galeteria (Instagram, TikTok, Kwai) e o WhatsApp **ainda não estão prontos/ativos**. Atualmente os ícones no footer e os botões de WhatsApp apontam para URLs genéricas (`https://instagram.com/`, `https://tiktok.com/`, etc.) e para um número de WhatsApp que pode não estar configurado.
+
+**O que precisa ser feito:** Em vez de os links levarem a páginas externas (que não existem ainda ou não estão prontas), ao clicar em qualquer um deles, o usuário deve **apenas ver uma mensagem "Em breve"** — sem navegar para lugar nenhum.
+
+### Elementos afetados
+
+| Elemento | Localização | Comportamento Atual | Novo Comportamento |
+|----------|------------|---------------------|-------------------|
+| Instagram (ícone SVG) | Footer | Abre `instagram.com` | Mostra "Em breve" |
+| TikTok (ícone SVG) | Footer | Abre `tiktok.com` | Mostra "Em breve" |
+| Kwai (ícone SVG) | Footer | Abre `kwai.com` | Mostra "Em breve" |
+| WhatsApp (botão hero) | Seção Hero | Abre `wa.me/...` | Mostra "Em breve" |
+| WhatsApp (FAB flutuante) | Canto inferior direito | Abre `wa.me/...` | Mostra "Em breve" |
+
+### Implementação
+
+- Remover os `href` dos links ou apontar para `javascript:void(0)`
+- Adicionar um `onclick` ou event listener que exiba um alerta/toast elegante com o texto **"Em breve"**
+- Manter o visual dos ícones exatamente como está (SVGs bonitos)
+- A mensagem pode ser um **toast sutil** no estilo do site (animação CSS) ou um simples `alert()` — o toast seria mais elegante
+
+

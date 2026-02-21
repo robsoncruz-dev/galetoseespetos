@@ -27,7 +27,7 @@
 
   function updateThemeIcon(theme) {
     themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
-    themeToggle.setAttribute('aria-label', 
+    themeToggle.setAttribute('aria-label',
       theme === 'dark' ? 'Mudar para tema claro' : 'Mudar para tema escuro'
     );
   }
@@ -40,13 +40,13 @@
 
   function handleHeaderScroll() {
     const scrollY = window.scrollY;
-    
+
     if (scrollY > 50) {
       header.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
     }
-    
+
     lastScroll = scrollY;
   }
 
@@ -63,7 +63,7 @@
     menuOpen = !menuOpen;
     navMobile.classList.toggle('open', menuOpen);
     menuToggle.textContent = menuOpen ? '✕' : '☰';
-    menuToggle.setAttribute('aria-label', 
+    menuToggle.setAttribute('aria-label',
       menuOpen ? 'Fechar menu' : 'Abrir menu'
     );
   });
@@ -81,7 +81,7 @@
   // 4. REVEAL ANIMATIONS (IntersectionObserver)
   // ============================================================
   const revealElements = document.querySelectorAll('.reveal');
-  
+
   if ('IntersectionObserver' in window) {
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -105,17 +105,17 @@
   // 5. PROMO CODE — Copy to Clipboard
   // ============================================================
   const promoCode = document.getElementById('promo-code');
-  
+
   if (promoCode) {
     promoCode.addEventListener('click', async () => {
       const code = promoCode.textContent.trim();
-      
+
       try {
         await navigator.clipboard.writeText(code);
         const original = promoCode.textContent;
         promoCode.textContent = '✅ Copiado!';
         promoCode.style.borderColor = '#25D366';
-        
+
         setTimeout(() => {
           promoCode.textContent = original;
           promoCode.style.borderColor = '';
@@ -128,7 +128,7 @@
         textarea.style.opacity = '0';
         document.body.appendChild(textarea);
         textarea.select();
-        
+
         try {
           document.execCommand('copy');
           promoCode.textContent = '✅ Copiado!';
@@ -138,7 +138,7 @@
         } catch (e) {
           console.warn('Não foi possível copiar o código');
         }
-        
+
         document.body.removeChild(textarea);
       }
     });
@@ -151,7 +151,7 @@
     anchor.addEventListener('click', (e) => {
       const targetId = anchor.getAttribute('href');
       if (targetId === '#') return;
-      
+
       const target = document.querySelector(targetId);
       if (target) {
         e.preventDefault();
@@ -172,11 +172,34 @@
   // 7. LAZY STAGGER ANIMATION for grid items
   // ============================================================
   const staggerContainers = document.querySelectorAll('.features-grid, .menu-grid');
-  
+
   staggerContainers.forEach(container => {
     const items = container.querySelectorAll('.reveal');
     items.forEach((item, index) => {
       item.style.transitionDelay = `${index * 0.1}s`;
+    });
+  });
+
+  // ==================== "EM BREVE" TOAST ====================
+  const toast = document.getElementById('toast-em-breve');
+  const emBreveLinks = document.querySelectorAll('.em-breve');
+  let toastTimeout;
+
+  emBreveLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      // Reset animation if already showing
+      clearTimeout(toastTimeout);
+      toast.classList.remove('show');
+
+      // Force reflow to restart animation
+      void toast.offsetWidth;
+
+      toast.classList.add('show');
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2000);
     });
   });
 
