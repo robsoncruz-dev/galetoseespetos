@@ -117,3 +117,40 @@ ANTES (4 cards):                    DEPOIS (4 cards):
 2. Gerar as 3 novas imagens com máxima fidelidade ao estilo fotográfico existente
 3. Atualizar o `index.html` com os novos cards, textos, preços e referências de imagem
 4. Verificar tudo no navegador
+
+---
+
+## 🔧 Ajuste Pós-Execução: Proporção das Guarnições
+
+### Problema Identificado
+
+Ao comparar as duas imagens com guarnição, percebe-se que as **tigelas de salpicão, feijão tropeiro e batatas assadas** são do **mesmo tamanho** tanto na foto do **Galeto Inteiro com Guarnição** quanto na foto do **Meio Galeto com Guarnição**.
+
+Isso gera uma **incoerência visual e comercial:**
+- Se o cliente paga R$ 119,90 pelo galeto inteiro com guarnição completa...
+- ...e paga R$ 69,99 pelo meio galeto com guarnição...
+- ...não faz sentido as porções de guarnição parecerem **idênticas** nas duas fotos.
+- O cliente pode questionar: "Qual a diferença real entre os dois combos além de meio frango?"
+
+### Solução
+
+Regenerar **apenas** a imagem `meio-galeto-guarnicao.png` com as seguintes diferenças visuais em relação à versão do galeto inteiro:
+
+| Elemento | Galeto Inteiro + Guarnição | Meio Galeto + Guarnição |
+|----------|---------------------------|------------------------|
+| Galeto | Inteiro, grande | Metade, menor |
+| Tigelas de guarnição | Grandes, cheias | **Menores, com menos conteúdo** |
+| Tábua/prato | Grande, farta | **Mais compacta, proporcional** |
+
+A ideia é que a foto do "Meio Galeto com Guarnição" transmita visualmente a sensação de uma **refeição individual proporcionada**, enquanto a do "Galeto Inteiro com Guarnição" transmita a sensação de uma **refeição farta para compartilhar**.
+
+### O que será feito
+
+1. Gerar nova imagem `meio-galeto-guarnicao.png` com:
+   - Tigelas/bowls menores (tipo ramekin ou tigela pequena)
+   - Quantidade visivelmente menor de cada guarnição
+   - Tábua ou prato menor, mais compacto
+   - Manter a mesma estética (iluminação, cenário, estilo)
+2. Substituir a imagem no `assets/`
+3. Verificar no navegador
+
