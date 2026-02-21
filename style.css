@@ -652,6 +652,42 @@ ul {
   transform: scale(1.05);
 }
 
+/* --- Teaser / Mystery Styles --- */
+.teaser-pulse {
+  animation: teaser-glow 2.5s ease-in-out infinite;
+}
+
+@keyframes teaser-glow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
+
+.teaser-code {
+  display: inline-block;
+  background: rgba(212, 160, 87, 0.08);
+  border: 2px dashed rgba(212, 160, 87, 0.3);
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--border-radius);
+  position: relative;
+  overflow: hidden;
+}
+
+.teaser-blur {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: var(--accent-gold);
+  filter: blur(8px);
+  user-select: none;
+  pointer-events: none;
+}
+
 .promo-hint {
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.4);

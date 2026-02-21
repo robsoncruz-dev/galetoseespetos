@@ -154,3 +154,128 @@ A ideia é que a foto do "Meio Galeto com Guarnição" transmita visualmente a s
 2. Substituir a imagem no `assets/`
 3. Verificar no navegador
 
+---
+
+## 🎟️ Substituição da Seção de Cupom (BEMVINDO10)
+
+### Situação Atual
+
+A seção de promoção exibe o cupom `BEMVINDO10` com 10% de desconto na primeira compra. Como **não será aplicado esta semana**, precisamos substituir esse espaço por algo útil.
+
+### Sugestões de Substituição
+
+#### **Opção 1 — Chamada para o WhatsApp (Pedido Rápido)**
+Transformar a seção num CTA direto para pedidos. Aproveita o destaque visual da seção para converter:
+- 🍗 **"Peça agora pelo WhatsApp!"**
+- *"Mande uma mensagem e garanta seu galeto fresquinho saindo da brasa."*
+- Botão grande do WhatsApp com link direto
+
+> **Vantagem:** Direciona para ação imediata de compra — a seção vira uma "máquina de conversão"
+
+#### **Opção 2 — Depoimento / Prova Social**
+Simular um depoimento de cliente satisfeito, gerando confiança:
+- ⭐⭐⭐⭐⭐
+- *"Melhor galeto da região! Sempre crocante e suculento. Minha família inteira adora."*
+- — Maria S., cliente frequente
+
+> **Vantagem:** Gera credibilidade, principalmente por ser uma galeteria nova/em inauguração
+
+#### **Opção 3 — Dica da Semana / Novidade**
+Usar o espaço para destacar o que há de **novo esta semana**:
+- 🆕 **"Novidade da semana!"**
+- *"Agora temos Meio Galeto! Porção individual com o mesmo sabor artesanal, ideal para você."*
+- Preço em destaque: **a partir de R$ 47,99**
+
+> **Vantagem:** Divulga o novo item que os clientes talvez não conheçam ainda
+
+#### **Opção 4 — Informação sobre Encomendas**
+Informar sobre encomendas antecipadas ou eventos:
+- 📦 **"Faça sua encomenda!"**
+- *"Planejando um churrasco ou evento? Encomende seus galetos com antecedência pelo WhatsApp."*
+
+> **Vantagem:** Abre uma nova frente de receita (eventos, festas, reuniões)
+
+#### **Opção 5 — Manter a Seção Oculta**
+Simplesmente remover/ocultar a seção inteira. O site ficaria: Hero → Sobre → Cardápio → Localização → Footer.
+
+> **Vantagem:** Mais limpo, sem "enrolação". Porém desperdiça um ponto visual de destaque no site.
+
+### Minha Recomendação
+
+Eu iria de **Opção 3 (Novidade da Semana)**, pois:
+- O "Meio Galeto" é um item **novo** que os clientes não conhecem
+- É a informação mais relevante e diferenciada da semana
+- Aproveita o destaque visual da seção para divulgar o que há de novo
+- Pode ser facilmente atualizada a cada semana com a novidade do momento
+
+---
+
+## 🎭 Opção 6 — Teaser "Cortina de Mistério" (Análise)
+
+### A Ideia
+
+Ao invés de substituir o cupom por outra informação, **criar um efeito de antecipação**: algo "escondido" atrás de uma cortina/véu visual, com uma mensagem que gera curiosidade, tipo:
+
+> *"Uma novidade que vai te surpreender está chegando... 👀"*
+
+O conceito é: o cliente vê que **tem algo ali**, mas não sabe o quê. Isso gera o impulso de **voltar ao site** na próxima semana para descobrir.
+
+### Por que funciona (Análise de Marketing)
+
+1. **Gatilho de Curiosidade** — O cérebro humano não tolera bem a incompletude. Quando algo é parcialmente revelado, criamos uma necessidade natural de "fechar" essa informação (*efeito Zeigarnik*).
+
+2. **Retenção e Retorno** — O cliente que vê o teaser tem um motivo concreto para voltar ao site: descobrir a novidade.
+
+3. **Valorização da Promoção Futura** — Quando o cupom finalmente aparecer, terá mais impacto emocional. O cliente já estava esperando.
+
+4. **Baixo Custo, Alto Engajamento** — Não precisa oferecer nada agora. O simples ato de "esconder" algo já gera engajamento.
+
+### Como seria visualmente
+
+```
+┌──────────────────────────────────────────────┐
+│                                              │
+│                 🎁 ou 👀                     │
+│                                              │
+│     "Algo especial está sendo preparado      │
+│          para você... Aguarde! 🔥"           │
+│                                              │
+│        ┌─────────────────────────┐           │
+│        │   ? ? ? ? ? ? ? ? ? ?  │  ← blur   │
+│        │   EM BREVE AQUI...     │  ← desfoque│
+│        └─────────────────────────┘           │
+│                                              │
+│   "Fique de olho — você vai                  │
+│    se surpreender 😉"                        │
+│                                              │
+└──────────────────────────────────────────────┘
+```
+
+### Possíveis Variações de Mensagem
+
+| Variação | Texto Principal | Texto Secundário |
+|----------|----------------|------------------|
+| Mistério | 🎁 *"Tem surpresa vindo aí..."* | "Fique de olho, novidades em breve!" |
+| Construção | 🚧 *"Algo especial em construção"* | "Estamos preparando algo especial pra você" |
+| Elegante | ✨ *"Em breve, um presentinho pra você"* | "Acompanhe nossas novidades pelo WhatsApp" |
+
+### Implementação Técnica
+
+O efeito visual pode ser feito **apenas com CSS**, sem JavaScript adicional:
+- **CSS blur/desfoque** sobre o texto do cupom (como se estivesse atrás de um vidro fosco)
+- **Gradiente de cortina** com animação sutil de "respiração/pulso"
+- **Ícone animado** (🎁 pulsando ou brilhando com `@keyframes`)
+- O bloco do `promo-code` vira uma caixa com `? ? ? ? ?` e borda pontilhada com efeito desfocado
+
+### Minha Opinião
+
+Acho essa abordagem **muito mais inteligente** que as opções anteriores:
+
+- ✅ Não desperdiça o espaço visual de destaque
+- ✅ Gera curiosidade e motivo para o cliente voltar
+- ✅ Quando o cupom voltar, o impacto será maior
+- ✅ É elegante — mostra profissionalismo e planejamento
+- ✅ Pode ser reutilizado sempre que não houver promoção ativa
+
+**Recomendo fortemente esta abordagem.** Qual variação de mensagem prefere?
+
