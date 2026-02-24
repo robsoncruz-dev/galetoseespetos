@@ -24,3 +24,6 @@ TODO-privado.md
 # === Node (para fases futuras) ===
 node_modules/
 package-lock.json
+
+# === Documentos privados ===
+docs/
