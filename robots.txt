@@ -1,0 +1,15 @@
+# robots.txt — Galeteria Galetos e Espetos
+User-agent: *
+Allow: /
+
+# Bloqueia bots de IA / scraping agressivo
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+Sitemap: https://galetoseespetos.com.br/sitemap.xml

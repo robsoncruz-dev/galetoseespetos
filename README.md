@@ -1,53 +1,27 @@
-# 🍗 Recanto da Sustenta — Landing Page
+# 🍗 Galetos e Espetos — Recanto da Sustenta
 
-> Landing page institucional da Galeteria "Recanto da Sustenta"
+> Galeteria artesanal com galetos assados na brasa e tempero caseiro da casa.
 
-## 📸 Preview
+## 🌐 Acesse
 
-Abra `index.html` no navegador para visualizar.
+**[galetoseespetos.com.br](https://galetoseespetos.com.br)**
 
-## 🚀 Como rodar
+## 📍 Localização
 
-```bash
-# Navegue até a pasta do projeto
-cd Fase_01_Landing_Page/
+**Av. Santo Antônio, 15** — Bairro Mário Cyprestes  
+Vitória — Espírito Santo | CEP: 29027-210
 
-# Inicie um servidor local (necessário para Google Fonts e Maps)
-python3 -m http.server 8080
+## 🕐 Funcionamento
 
-# Acesse no navegador
-# http://localhost:8080
-```
+| Dia | Horário |
+|---|---|
+| Sábado | 11h às 16h |
+| Domingo | 11h às 16h |
 
-## 🛠️ Tecnologias
+## 📱 Contato
 
-- **HTML5** — Estrutura semântica
-- **CSS3** — Custom Properties, Grid, Flexbox, Media Queries, Glassmorphism
-- **JavaScript Vanilla** — DOM, IntersectionObserver, Clipboard API, localStorage
-- **Google Fonts** — Playfair Display + Inter
+Peça pelo **WhatsApp** diretamente pelo site!
 
-## 📁 Estrutura
+---
 
-```
-Fase_01_Landing_Page/
-├── index.html      ← Página principal
-├── style.css       ← Design system + estilos
-├── script.js       ← Interatividade
-├── assets/         ← Imagens
-├── estruct.md      ← Análise e proposta
-└── README.md       ← Este arquivo
-```
-
-## ✨ Features
-
-- 🌙 Tema Dark/Light com persistência (localStorage)
-- 📱 Responsivo (mobile-first: 375px → 768px → 1024px+)
-- 💬 Botão flutuante do WhatsApp
-- 🎉 Cupom de desconto com cópia para clipboard
-- 🗺️ Google Maps integrado
-- ✨ Animações de scroll (IntersectionObserver)
-- 🎨 Design system com CSS Custom Properties
-
-## 📋 Módulo 01 — Projeto 2, Fase 1
-
-Este projeto faz parte do curso Antigravity, Módulo 01.
+© 2026 Recanto da Sustenta. Todos os direitos reservados.

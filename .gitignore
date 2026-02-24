@@ -1,0 +1,26 @@
+# === Sistema Operacional ===
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# === Editores ===
+.vscode/
+.idea/
+*.sublime-*
+
+# === Ambiente ===
+.env
+.env.local
+.env.*.local
+
+# === Notas pessoais / sensíveis ===
+*.bak
+*.log
+notas-pessoais/
+TODO-privado.md
+
+# === Node (para fases futuras) ===
+node_modules/
+package-lock.json
